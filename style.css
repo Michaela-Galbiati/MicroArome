@@ -1,177 +1,217 @@
 @font-face {
-    font-family: grand;
-    src: url(Elgrand-Regular.otf);
-  }
-  * {
-    margin: 0;
-    padding: 0;
-  }
+  font-family: grand;
+  src: url(Elgrand-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  :target {
-    scroll-margin-top: 30px;
-  }
+:target {
+  scroll-margin-top: 40px;
+}
 
-  body {
-    margin: auto;
-    scroll-behavior: smooth;
-    background-image: linear-gradient(to right, #F58056, #f56531, #f34a0d);
-  }
+[data-anime] {
+  opacity: 0;
+  transition: 1s;
+}
 
-  nav {
-    text-align: center;
-    width: 100%;
-    display: flex;
-    top: 0;
-    position: fixed;
-    height: 40px;
-    background-color: rgb(248, 222, 213);
-  }
+[data-anime=parteA] {
+  transform: translate3d(0, -130px, 0);
+  background-color: black;
+}
 
-  div#menu > a {
-    text-decoration: none;
-    padding: 3px 20px 3px 20px;
-    color: rgb(182, 46, 0);
-    font-size: 14px;
-    border-radius: 5px;
-    text-align: center;
-    border: 2px solid orange;
-    margin-left: 2px;
-    box-shadow: 1px 1px 1px rgb(255, 64, 0);
-  }
+[data-anime=parteB] {
+  transform: translate3d(0, 130px, 0);
+}
 
-  div#menu > a:hover {
-    background-color: white;
-    color: rgb(242, 66, 8);
-    font-size: 16px;
-    border: 2px solid white;
-    box-shadow: 1px 1px 1px white;
-  }
+[data-anime=parteC] {
+  transform: translate3d(-300px 0, 0);
+}
 
-  div#menu {
-    width: 100%;
-    margin-top: 6px;
-  }
+[data-anime=parteD] {
+  transform: translate3d(-300px 0, 0);
+}
 
-  header {
-    margin-top: 50px;
-  }
+[data-anime=parteE] {
+  transform: translate3d(-300px 0, 0);
+}
 
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+body {
+  margin: auto;
+  scroll-behavior: smooth;
+  background-image: linear-gradient(to right, #F58056, #f56531, #f34a0d);
+}
+
+#telagrande {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  margin: 0 auto;
+  height: 40px;
+  background-color: rgba(251, 222, 213, 0.845);
+}
+
+.menu {
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  padding: 3px 20px 3px 20px;
+  color: rgb(182, 46, 0);
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid orange;
+  margin-left: 2px;
+  box-shadow: 1px 1px 1px rgb(255, 64, 0);
+}
+
+div#menu > a:hover {
+  background-color: white;
+  color: rgb(242, 66, 8);
+  font-size: 16px;
+  border: 2px solid white;
+  box-shadow: 1px 1px 1px white;
+}
+
+div#menu {
+  width: 100%;
+  margin-top: 6px;
+}
+
+header {
+  margin-top: 70px;
+}
+
+main {
+  max-width: 70%;
+  margin: auto;
+}
+
+@media (width < 1200px) {
   main {
-    max-width: 70%;
-    margin: auto;
+    max-width: 100%;
   }
+  div#menu > a {
+    font-size: 12px;
+    margin-left: 0px;
+  }
+}
+section {
+  background-color: rgba(182, 54, 7, 0.3490196078);
+  margin: 80px 30px 30px 30px;
+  padding: 20px;
+  border-radius: 5px;
+}
 
-  @media (width < 1200px) {
-    main {
-      max-width: 100%;
-    }
-    div#menu > a {
-      font-size: 12px;
-      margin-left: 0px;
-    }
-  }
-  section {
-    background-color: rgba(182, 54, 7, 0.3490196078);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-  }
+section#projeto {
+  background-image: url("framboesa.jpg");
+  background-attachment: fixed;
+}
 
-  section#projeto {
-    background-image: url(framboesa.jpg);
-    background-attachment: fixed;
-  }
+section#pesquisa {
+  background-image: url("pexels-engin-akyurt-1435735.jpg");
+  background-attachment: fixed;
+}
 
-  section#pesquisa {
-    background-image: url(pexels-engin-akyurt-1435735.jpg);
-    background-attachment: fixed;
-  }
+section#produto {
+  background-image: url("pexels-olga-1153655.jpg");
+  background-attachment: fixed;
+}
 
-  section#produto {
-    background-image: url(pexels-olga-1153655.jpg);
-    background-attachment: fixed;
-  }
+section#mercado {
+  background-image: url("limao.jpg");
+  background-attachment: fixed;
+}
 
-  section#mercado {
-    background-image: url(limao.jpg);
-    background-attachment: fixed;
-  }
+a#link {
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: justify;
+}
 
-  a#link {
+a#link:hover {
+  background-color: rgba(248, 222, 213, 0.762);
+  color: black;
+}
+
+section#desafios {
+  background-image: url("pexels-quang-nguyen-vinh-2135677.jpg");
+  background-attachment: fixed;
+}
+
+.text {
+  background-color: rgba(248, 222, 213, 0.762);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+}
+
+h2 {
+  margin: 10px;
+}
+
+p {
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+  background-color: white;
+  width: 250px;
+  margin: auto;
+  border-radius: 40px 0px;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 2.5em;
+  color: #09BEEB;
+}
+
+footer > div > a {
+  text-decoration: none;
+}
+
+h2#subtitulo {
+  text-align: center;
+  color: white;
+}
+
+h4#bytitulo {
+  text-align: center;
+  color: white;
+}
+
+footer {
+  color: white;
+  text-align: center;
+}
+
+footer > p {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .menu {
     text-decoration: none;
-    border-radius: 5px;
-    background-color: orange;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: justify;
+    padding: 3px 10px 3px 10px;
   }
+}
 
-  a#link:hover {
-    background-color: rgba(248, 222, 213, 0.762);
-    color: black;
-  }
-
-  section#desafios {
-    background-image: url(pexels-quang-nguyen-vinh-2135677.jpg);
-    background-attachment: fixed;
-  }
-
-  .text {
-    background-color: rgba(248, 222, 213, 0.762);
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-  }
-
-  h2 {
-    margin: 10px;
-  }
-
-  p {
-    text-align: justify;
-  }
-
-  h1 {
-    text-align: center;
-    background-color: white;
-    width: 250px;
-    margin: auto;
-    border-radius: 40px 0px;
-    margin-top: 20px;
-    padding: 20px;
-    font-size: 2.5em;
-    color: #09BEEB;
-  }
-
-  footer > div > a {
-    text-decoration: none;
-  }
-
-  h2#subtitulo {
-    text-align: center;
-    color: white;
-  }
-
-  h4#bytitulo {
-    text-align: center;
-    color: white;
-  }
-
-  footer {
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  footer > p {
-    margin-top: 10px;
-    text-align: center;
-    color: white;
-  }
-
-  /*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
