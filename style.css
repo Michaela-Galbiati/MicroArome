@@ -10,7 +10,20 @@
 html {
   scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;/* A altura só é vista quando a rolagem é horizontal */
+}
 
+body::-webkit-scrollbar-track {
+  background-color: #F29F05;
+  padding: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #590202;
+  border-radius: 0px 5px ;
+}
 :target {
   scroll-margin-top: 40px;
 }
@@ -22,7 +35,7 @@ html {
 
 [data-anime=parteA] {
   transform: translate3d(0, -130px, 0);
-  background-color: black;
+
 }
 
 [data-anime=parteB] {
@@ -49,91 +62,107 @@ html {
 body {
   margin: auto;
   scroll-behavior: smooth;
-  background-image: linear-gradient(to right, #F58056, #f56531, #f34a0d);
+
+  background-image: linear-gradient(to right, #F29F05, #F29F05);
 }
 
 #telagrande {
   z-index: 999;
-  text-align: center;
   display: flex;
   width: 100%;
   top: 0;
   position: sticky;
   margin: 0 auto;
-  height: 40px;
-  background-color: rgba(251, 222, 213, 0.845);
+  height: 50px;
+  background-color: #590202;
+}
+#telamin {
+  z-index: 999;
+  display: flex;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  margin: 0 auto;
+  height: 50px;
+  background-color: #75612F;
 }
 
 .menu {
   margin: 0 auto;
-  position: relative;
   text-decoration: none;
-  padding: 3px 20px 3px 20px;
-  color: rgb(182, 46, 0);
-  font-size: 14px;
-  border-radius: 5px;
-  text-align: center;
-  border: 2px solid orange;
-  margin-left: 2px;
-  box-shadow: 1px 1px 1px rgb(255, 64, 0);
+  color: #ffffff;
+  padding-bottom: 15px;
+  margin: 25px 15px;
+  font-size: 16px;
 }
 
-div#menu > a:hover {
-  background-color: white;
-  color: rgb(242, 66, 8);
+div#menu > .menu:hover {
+  color: rgb(255, 255, 255);
   font-size: 16px;
-  border: 2px solid white;
-  box-shadow: 1px 1px 1px white;
+  border-bottom-width: 2px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-color: white;
+  border-style: solid;
 }
 
 div#menu {
   z-index: 999;
   width: 100%;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 header {
-  margin-top: 40px;
+  margin-top: 30px;
+  color:  #1f1d18;
+  padding: 10px;
 }
 
 main {
-  max-width: 70%;
-  margin: auto;
+  width: 100%;
 }
 
-@media (width < 1200px) {
-  main {
-    max-width: 100%;
-  }
-  div#menu > a {
-    font-size: 12px;
-    margin-left: 0px;
-  }
+.titulo{
+  float: right;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  margin: -7px 15px;
+  font-size: 25px;
 }
+.titulo:hover{
+  color: white;
+}
+
 section {
   background-color: rgba(182, 54, 7, 0.3490196078);
-  margin: 80px 30px 30px 30px;
-  padding: 20px;
+  margin: 40px 0px;
+  padding: 10px;
   border-radius: 5px;
 }
 
 section#projeto {
-  background-image: url("framboesa.jpg");
+  background-image: url("pexels-sami-aksu-9899252.jpg");
   background-attachment: fixed;
+
 }
 
 section#pesquisa {
-  background-image: url("pexels-engin-akyurt-1435735.jpg");
+  background-image: url("pexels-lena-khrupina-2683373.jpg");
   background-attachment: fixed;
+
 }
 
 section#produto {
-  background-image: url("pexels-olga-1153655.jpg");
+  background-image: url("pexels-oleksandr-p-12955510.jpg");
+
   background-attachment: fixed;
 }
 
 section#mercado {
   background-image: url("limao.jpg");
+
   background-attachment: fixed;
 }
 
@@ -154,53 +183,51 @@ a#link:hover {
 
 section#desafios {
   background-image: url("pexels-quang-nguyen-vinh-2135677.jpg");
+
   background-attachment: fixed;
 }
+h5{
+  background-color:#d19020;
+  border-radius: 5px;
+  color: black;
+  width: 220px;
+  padding: 5px;
+  font-size: 13px;
 
-.text {
-  background-color: rgba(248, 222, 213, 0.762);
+}
+p{
+  background-color: rgb(248, 222, 213);
   border-radius: 5px;
   padding: 20px;
-  margin: 20px;
-}
-
-h2 {
-  margin: 10px;
-}
-
-p {
+  margin: 80px 10px;
   text-align: justify;
+
+}
+.text{
+  margin: 80px 5px;
 }
 
-h1 {
-  text-align: center;
-  background-color: white;
-  width: 250px;
-  margin: auto;
-  border-radius: 40px 0px;
-  margin-top: 20px;
-  padding: 20px;
-  font-size: 2.5em;
-  color: #09BEEB;
-}
+
 
 footer > div > a {
   text-decoration: none;
 }
 
-h2#subtitulo {
-  text-align: center;
-  color: white;
-  margin-top: 30px;
-}
 
-h4#bytitulo {
-  text-align: center;
-  color: white;
+
+#bytitulo {
+  border-bottom-width: 2px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-color: white;
+  border-style: solid;
+  width: 200px;
+  padding: 5px;
 }
 
 footer {
-  color: white;
+  color: #333029;
   text-align: center;
 }
 
@@ -213,7 +240,23 @@ footer > p {
 @media (max-width: 600px) {
   .menu {
     text-decoration: none;
-    padding: 3px 10px 3px 10px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 12px;
+    border-bottom-width: 2px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: white;
+    border-style: solid;
+  }
+  .titulo{
+    font-size: 17px;
+    margin-top: 0px;
+  }
+  div#menu > .menu:hover {
+    color: rgb(255, 255, 255);
+    font-size: 13px;
   }
 }
 
